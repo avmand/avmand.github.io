@@ -1,0 +1,414 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  background: rgb(46, 42, 42);
+  color: white;
+  text-align: center;
+}
+
+.module-jamf {
+}
+
+.jamf-container {
+  display: block;
+  /* overflow: hidden; */
+  text-align: center;
+}
+
+.jamf-mover {
+  background: url("./image/sky.jpg");
+  background-size: 700px;
+  background-position: 50px 50px;
+  background-repeat: repeat;
+  transform: scale(1);
+  color: white;
+  text-align: center;
+  transition: background-position 0.25s;
+  &.no-more-slidey {
+    transition: none;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: rgb(1, 1, 34);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+
+/* Main column */
+.main {   
+  -ms-flex: 100%; /* IE10 */
+  flex: 100%;
+  background-color: #e4d2d2;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+-ms-flex: 100%; /* IE10 */
+  flex: 100%;
+  padding: 20px;
+  text-align: center;
+  background: #dbe4d2;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  margin:auto;
+  margin-bottom: auto;
+  padding: 0 8px;
+}
+
+.columnMain {
+  float: left;
+  width: 80%;
+  margin:auto;
+  margin-bottom: auto;
+  padding: 0 8px;
+}
+
+.columnWorkExp {
+  float: left;
+  width: 40%;
+  margin:auto;
+  margin-bottom: auto;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgb(2, 2, 8);
+  margin:auto
+  
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #e4d2d2;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+
+h1 {  
+   font-size: 50px;
+   left: 0; 
+   width: 100%; 
+}
+
+.fa {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-clip: content-box;
+    font-size: 150%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-envelope {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-github {
+  background: white;
+  color: black;
+}
+    </style>
+    </head>
+
+
+<body>
+    <div class="module-jamf" id="module-jamf">
+  
+      <div class="jamf-container" id="jamf-container" >
+        <div class="jamf-mover" id="jamf-mover">
+           
+                <div class="navbar">
+                    <a href="home.html">Home</a>
+                    <a href="#Work Experience">Work Experience</a>
+                </div>
+                
+                <br/>
+                <br/>
+                <br/>
+                <h1 >Asrita Venkata Mandalam</h1>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="row" style=" margin-left: auto; margin-right: auto;">
+                  <div class="columnMain" style=" margin-left: auto; margin-right: auto;">
+                        <div class="card">
+                            <div class="container" >
+                                <br>
+                                <br>
+                                <h2 style="color: white; font-size: 30px;">Hello!</h2>
+                                <h3 style="color: white; font-weight: 200; font-size: 20px">I'm a final year undergraduate at BITS Pilani, Pilani Campus. My major is Computer Science and I have a minor in Finance. 
+                                    My research interests are in Natural Language Processing, in particular, analysis of under-resourced languages.
+                                I enjoy learning new things and have tried my hand at Augmented Reality, Game Development, Mobile Applications and Glass Painting. To know more about me, please check out my CV and feel free to reach out to me!</h3>
+                                <a href="mailto:f20171179@pilani.bits-pilani.ac.in" class="fa fa-envelope"> </a>  
+                                <a href="https://in.linkedin.com/in/asritavm" class="fa fa-linkedin"> </a> 
+                                <a href="https://github.com/avmand" class="fa fa-github"> </a> 
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a id="Work Experience"><h1>Work Experience</h1></a>
+
+                <div class="row" style=" margin-left: auto; margin-right: auto;">
+                    <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
+                        <div class="card">
+                            <div class="container">
+                                <br>
+                                <br>
+                                <img src="image/Udhyam.jpg" alt="Udhyam">
+                                <h3 style="color: white; font-size: 30px; font-weight: 100;">Udhyam Learning Foundation</h3>
+                                <h2 style="color: white; font-size: 30px;">Monitoring and Evaluation Intern</h2>
+                                <h4 style="color: white; font-size: 18px; font-weight:lighter; ">Performing Data Analysis and Visualization using Zoho Creator. Creating fully-functional applications with APIs to process streams of data from different platforms. Made the process of assessing the effectiveness of educational programs 3 times faster by automation.</h4>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
+                        <div class="card">
+                            <div class="container">
+                                <br>
+                                <br>
+                                <img src="image/bits.png" alt="bits-pilani" style="width: 120px;">
+                                <h2 style="color: white; font-size: 30px; font-weight: 100;">BITS Pilani, Pilani Campus</h2>
+                                <h2 style="color: white; font-size: 30px;">Research Assistant</h2>
+                                <h3 style="color: white; font-size: 18px; font-weight:lighter; ">Worked with Dr. Yashvardhan Sharma as a research assistant in the Web Intelligence & Social Computing Lab on projects based on sarcasm detection, customer behavior analysis, sentiment analysis of Dravidian languages, mask and social distancing detection.</h3>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+
+                <div class="row" style=" margin-left: auto; margin-right: auto;">
+                    <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
+                        <div class="card">
+                            <div class="container">
+                                <br>
+                                <br>
+                                <img src="image/sentic-logo-medium.png" alt="SenticNet" style="width: 120px;">
+                                <h2 style="color: white; font-size: 30px; font-weight: 100;">SenticNet</h2>
+                                <h2 style="color: white; font-size: 30px;">Research Intern</h2>
+                                <h3 style="color: white; font-size: 18px; font-weight:lighter; ">Built ArabiziVec, a distributed word representation for informal Arabic, an open- source project. This project was supervised by Dr. Oumaima Oueslati, Dr. Erik Cambria (Nanyang Technological University) and Dr. Yashvardhan Sharma (BITS Pilani, Pilani campus).</h3>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
+                        <div class="card">
+                            <div class="container">
+                                <br>
+                                <br>
+                                <img src="image/tnstc.jpg" alt="TNSTC">
+                                <h2 style="color: white; font-size: 30px; font-weight: 100;">Tamil Nadu Science and Technology Centre</h2>
+                                <h2 style="color: white; font-size: 30px;">Technology Intern</h2>
+                                <h3 style="color: white; font-size: 18px; font-weight:lighter; ">Designed a mobile application with Augmented Reality features using ARCore and Java (Android Studio). Reduced the need for human intervention and was expected to increase visitors by at least 10-15% .</h3>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+        </div>
+      
+    </div>
+    <script type="text/javascript">
+
+      var container = document.querySelector("#jamf-container");
+      var mover = document.querySelector("#jamf-mover");
+
+      container.addEventListener("mousemove", function(e) {
+        mover.style.backgroundPositionX = -e.offsetX * 1.8 + "px";
+        mover.style.backgroundPositionY = -e.offsetY + 80 + "px";
+      });
+
+      container.addEventListener("mouseenter", function() {
+        
+        setTimeout(function() {
+          mover.classList.add("no-more-slidey");
+          container.removeEventListener("mouseenter");
+        }, 250);
+        
+      });
+        
+            </script>
+</body>
+</html>
