@@ -98,6 +98,11 @@
         color: black;
       }
 
+      .navbar .icon 
+      {
+        display: none;
+      }
+
       .row {  
         display: -ms-flexbox; /* IE10 */
         display: flex;
@@ -224,10 +229,6 @@
         width: 70%;
       }
 
-      .cardblue {
-        background-color: rgb(2,2,8);
-        margin:auto
-      }
 
       .about-section {
         padding: 50px;
@@ -561,6 +562,103 @@
         100%  { background-color: #ccc; }
       }
       
+      @media screen and (max-width: 900px) 
+      {
+        
+        
+
+        .column
+        {
+          width: 100%;
+        }
+		
+        .columnAchievements
+        {
+          width: 100%;
+          display: block;
+        }
+		
+
+        .columnMain
+        {
+          width: 100%;
+          display: block;
+        }
+
+        .columnAbout
+        {
+          width: 100%;
+          display: block;
+        }
+
+        .card
+        {
+          width: 100%;
+        }
+
+
+        .cardAchievement
+        {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+        }
+
+
+        .cardProjects
+        {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+          margin-left: 10%;
+          margin-right: 10%;
+        }
+
+        .columnAchievements
+        {
+          width: 100%;
+        }
+
+        .columnAbout 
+        {
+          width: 100%;
+          padding-left:25%;
+          padding-right:25%;
+        }
+
+        .column
+        {
+          width: 100%;
+          display: block;
+          margin-bottom: 20px;
+        }
+
+        .cardAchievementImg
+        {
+          width:60%;
+        }
+        
+        .cardImg
+        {
+          width:100%;
+        }
+        .arrow {
+        text-align: center;
+        }
+
+        div.bounce {
+          display: none;
+        }
+
+        div.arrow {
+          display: none;
+        }
+
+        .navbar{
+          font-size: 80%;
+        }
+
+        .navbarNotSticky{
+          font-size: 80%;
+        }
+
+      }
     </style>
   </head>
     
@@ -606,12 +704,15 @@
       </div>
 
       <a id="About" ></a>
-      <div class="navbar">
+      <div class="navbar" id = "navigationBar">
         <a href="#Achievements" class="right">Achievements</a>
         <a href="#Projects" class="right">Projects</a>
         <a href="#Education" class="right">Education</a>
         <a href="#Work Experience" class="right">Work Ex</a>
         <a href="#About" class="right">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
       <div class="row" style=" margin-left: auto; margin-right: auto; background-color: white;">
         <div class="columnAbout" style=" margin-left: auto; margin-right: auto;">
@@ -656,8 +757,9 @@
                 <div class="cardAchievementImg" style="background-color: white;">
                   <img src="image/Udhyam.jpg" alt="Udhyam" style="width: 100%; margin-left: auto; margin-right: auto;">
                 </div>
+                <br>
                 <div class="cardAchievement" style="text-align: left;  background-color: transparent;">
-                  <div class="container" style =" padding-right: 30px; padding-top: 20px; padding-bottom: 20px;">
+                  <div class="container" style =" padding-top: 20px; padding-bottom: 20px;">
                     <h3 style="color: black; font-size: 20px; font-weight: 100;">Udhyam Learning Foundation</h3>
                     <h2 style="color: black; font-size: 20px;">Monitoring and Evaluation Intern | <p style="color: rgb(54, 53, 53); font-size: 15px; display: inline-block;" > 11/2020 - 05/2021</p></h2>
                     <p style="color: black; font-size: 18px; font-weight:lighter; text-align: justify;">Performing Data Analysis and Visualization using Zoho Creator. Creating fully-functional applications with APIs to process streams of data from different platforms. Made the process of assessing the effectiveness of educational programs 3 times faster by automation.</p>
@@ -678,8 +780,9 @@
                 <div class="cardAchievementImg" style="background-color: transparent;">
                   <img src="image/bits.png" alt="bits-pilani" style="width: 60%; margin-left: auto; margin-right: auto;">
                 </div>
+                <br>
                 <div class="cardAchievement" style="text-align: left;  background-color: transparent;">
-                  <div class="container" style =" padding-right: 30px; padding-top: 20px; padding-bottom: 20px;">
+                  <div class="container" style ="padding-top: 20px; padding-bottom: 20px;">
                     <h3 style="color: black; font-size: 20px; font-weight: 100;">BITS Pilani, Pilani Campus</h3>
                     <h2 style="color: black; font-size: 20px; ">Research Assistant | <p style="color: rgb(54, 53, 53); font-size: 15px; display: inline-block;" > 01/2019 - 05/2021</p></h2>
                     <p style="color: black; font-size: 18px; font-weight:lighter; text-align: justify;">Worked with Dr. Yashvardhan Sharma as a research assistant in the Web Intelligence & Social Computing Lab on projects based on sarcasm detection, customer behavior analysis, sentiment analysis of Dravidian languages, mask and social distancing detection.</p>
@@ -700,8 +803,9 @@
                 <div class="cardAchievementImg" style="background-color: transparent;">
                   <img src="image/senticnet2.png" alt="SenticNet" style="width: 60%; margin-left: auto; margin-right: auto;">
                 </div>
+                <br>
                 <div class="cardAchievement" style="text-align: left;  background-color: transparent;">
-                  <div class="container" style =" padding-right: 30px; padding-top: 20px; padding-bottom: 20px;">
+                  <div class="container" style ="padding-top: 20px; padding-bottom: 20px;">
                     <h3 style="color: black; font-size: 20px; font-weight: 100;">SenticNet</h3>
                     <h2 style="color: black; font-size: 20px;">Research Intern | <p style="color: rgb(54, 53, 53); font-size: 15px; display: inline-block;" > 07/2020 - 12/2020</p></h2>
                     <p style="color: black; font-size: 18px; font-weight:lighter; text-align: justify;">Built ArabiziVec, a distributed word representation for informal Arabic, an open- source project. This project was supervised by Dr. Oumaima Oueslati (Nanyang Technological University), Dr. Erik Cambria (Nanyang Technological University) and Dr. Yashvardhan Sharma (BITS Pilani, Pilani campus).</p>
@@ -722,8 +826,9 @@
                 <div class="cardAchievementImg" style="background-color: transparent;">
                   <img src="image/tnstc.jpg" alt="TNSTC" style="width: 60%; margin-left: auto; margin-right: auto;">
                 </div>
+                <br>
                 <div class="cardAchievement" style="text-align: left;  background-color: transparent;">
-                  <div class="container" style =" padding-right: 30px; padding-top: 20px; padding-bottom: 20px;">
+                  <div class="container" style ="padding-top: 20px; padding-bottom: 20px;">
                     <h3 style="color: black; font-size: 20px; font-weight: 100;">Tamil Nadu Science and Technology Centre</h3>
                     <h2 style="color: black; font-size: 20px;">Technology Intern | <p style="color: rgb(54, 53, 53); font-size: 15px; display: inline-block;" > 05/2019 - 07/2019</p></h2>
                     <p style="color: black; font-size: 18px; font-weight:lighter; text-align: justify;">Designed a mobile application with Augmented Reality features using ARCore and Java (Android Studio). Reduced the need for human intervention and was expected to increase visitors by at least 10-15%.</p>
@@ -883,6 +988,7 @@
                 <div class="cardAchievementImg">
                   <img src="image/soa.png" alt="SOA" style="width: 100%; margin-left: auto; margin-right: auto;">
                 </div>
+                <br>
                 <div class="cardAchievement" style="text-align: left;">
                   <div class="container" style =" padding-right: 30px; padding-top: 20px; padding-bottom: 20px;">
                     <h3 style="color: black; font-size: 20px; font-weight: 100;">Society of Actuaries (SOA)</h3>
@@ -906,6 +1012,7 @@
                 <div class="cardAchievementImg">
                   <img src="image/netapp.png" alt="NetApp Logo" style="width: 100%; margin-left: auto; margin-right: auto;">
                 </div>
+                <br>
                 <div class="cardAchievement" style="text-align: left;">
                   <div class="container" style =" padding-right: 30px; padding-top: 20px; padding-bottom: 20px;">
                     <h3 style="color: black; font-size: 20px; font-weight: 100;">NetApp Women Innovathon</h3>
@@ -1063,6 +1170,19 @@
           container.removeEventListener("mouseenter");
         }, 250);
       });
+
+      function myFunction() 
+      {
+        var x = document.getElementById("navigationBar");
+        if (x.className === "navbar") 
+        {
+          x.className += " responsive";
+        } 
+        else 
+        {
+          x.className = "navigationBar";
+        }
+      }
     </script>
   </body>
 </html>
