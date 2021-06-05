@@ -47,29 +47,7 @@
       box-sizing: border-box;
       }
 
-      .navbarNotSticky {
-        overflow: hidden;
-        background-color: rgb(1, 1, 34);
-        top: 0;
-      }
-
-      .navbarNotSticky a {
-        float: left;
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 20px;
-        text-decoration: none;
-      }
-
-      .navbarNotSticky a.right {
-        float: right;
-      }
-
-      .navbarNotSticky a:hover {
-        background-color: #ddd;
-        color: black;
-      }
+      
 
       .navbar {
         overflow: hidden;
@@ -78,6 +56,7 @@
         position: sticky;
         top: 0;
         z-index: 2;
+        font-size: x-large;
       }
 
       .navbar a {
@@ -639,10 +618,6 @@
           font-size: 80%;
         }
 
-        .navbarNotSticky{
-          font-size: 80%;
-        }
-
         .containerTyping span{
           font-size: 60%;
         }
@@ -657,17 +632,17 @@
     
   <body>
     <div>
-
+      <div class="navbar">
+        <a href="#Achievements" class="right">Achievements</a>
+        <a href="#Projects" class="right">Projects</a>
+        <a href="#Education" class="right">Education</a>
+        <a href="#Work Experience" class="right">Work Ex</a>
+        <a href="#About" class="right">About</a>
+      </div>
       <div class="module-jamf" id="module-jamf">
         <div class="jamf-container" id="jamf-container" >
           <div class="jamf-mover" id="jamf-mover">
-            <div class="navbarNotSticky">
-              <a href="#Achievements" class="right">Achievements</a>
-              <a href="#Projects" class="right">Projects</a>
-              <a href="#Education" class="right">Education</a>
-              <a href="#Work Experience" class="right">Work Ex</a>
-              <a href="#About" class="right">About</a>
-            </div>
+            
             <br>
             <br>
             <br>
@@ -699,13 +674,6 @@
       </div>
 
       <a id="About" ></a>
-      <div class="navbar" id = "navigationBar">
-        <a href="#Achievements" class="right">Achievements</a>
-        <a href="#Projects" class="right">Projects</a>
-        <a href="#Education" class="right">Education</a>
-        <a href="#Work Experience" class="right">Work Ex</a>
-        <a href="#About" class="right">About</a>
-      </div>
       <div class="row" style=" margin-left: auto; margin-right: auto; background-color: white;">
         <div class="columnAbout" style=" margin-left: auto; margin-right: auto; ">
           <div class="cardImg">
