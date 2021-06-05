@@ -1,643 +1,1066 @@
-<!-- TODO:
-1. Add dates for everything
-2. Change Font type/color/size to make it more readable -->
-
 <html>
-<head>
+  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style type="text/css">
 
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+      @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
 
-body {
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: top;
-  background: rgb(46, 42, 42);
-  color: white;
-  text-align: center;
-}
-
-.module-jamf {
-}
-
-.jamf-container {
-  display: block;
-  /* overflow: hidden; */
-  text-align: center;
-}
-
-.jamf-mover {
-  background: url("./image/sky.jpg");
-  background-size: 700px;
-  background-position: 50px 50px;
-  background-repeat: repeat;
-  transform: scale(1);
-  color: white;
-  text-align: center;
-  transition: background-position 0.25s;
-  &.no-more-slidey {
-    transition: none;
-  }
-}
-
-
-* {
-  box-sizing: border-box;
-}
-
-
-* {
-  box-sizing: border-box;
-}
-
-.glow {
-  font-size: 80px;
-  color: #fff;
-  text-align: center;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-
-
-/* Style the top navigation bar */
-.navbar {
-  overflow: hidden;
-  background-color: rgb(1, 1, 34);
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-}
-
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Column container */
-.row {  
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
-
-
-/* Main column */
-.main {   
-  -ms-flex: 100%; /* IE10 */
-  flex: 100%;
-  background-color: #e4d2d2;
-  padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Footer */
-.footer {
--ms-flex: 100%; /* IE10 */
-  flex: 100%;
-  padding: 20px;
-  text-align: center;
-  background: #dbe4d2;
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-.column {
-  float: left;
-  width: 33.33%;
-  margin:auto;
-  margin-bottom: auto;
-  padding: 0 8px;
-}
-
-.columnMain {
-  float: left;
-  width: 80%;
-  margin:auto;
-  margin-bottom: auto;
-  padding: 0 8px;
-}
-
-.columnWorkExp {
-  float: left;
-  width: 40%;
-  margin:auto;
-  margin-bottom: auto;
-  padding: 0 8px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: rgb(2, 2, 8);
-  margin:auto
-  
-}
-
-.about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #e4d2d2;
-  color: white;
-}
-
-.container {
-  padding: 0 16px;
-}
-
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.title {
-  color: grey;
-}
-
-
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
-
-
-h1 {  
-   font-size: 50px;
-   left: 0; 
-   width: 100%; 
-}
-
-.fa {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    background-clip: content-box;
-    font-size: 150%;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-google {
-  background: #dd4b39;
-  color: white;
-}
-
-.fa-envelope {
-  background: #dd4b39;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-.fa-github {
-  background: white;
-  color: black;
-}
-    </style>
-    </head>
-
-
-<body>
-    <div class="module-jamf" id="module-jamf">
-  
-      <div class="jamf-container" id="jamf-container" >
-        <div class="jamf-mover" id="jamf-mover">
-           
-                <div class="navbar">
-                    <a href="home.html">Home</a>
-                    <a href="#Work Experience">Work Experience</a>
-                    <a href="#Projects">Projects</a>
-                    <a href="#Publications" class="right">Publications</a>
-                    <a href="#Awards" class="right">Awards</a>
-                </div>
-                
-                <br/>
-                <br/>
-                <br/>
-                <h1 >Asrita Venkata Mandalam</h1>
-                <br>
-                <br>
-                <br>
-                <br>
-                <div class="row" style=" margin-left: auto; margin-right: auto;">
-                  <div class="columnMain" style=" margin-left: auto; margin-right: auto;">
-                        <div class="card">
-                            <div class="container" >
-                                <br>
-                                <br>
-                                <h2 style="color: white; font-size: 30px;">Hello!</h2>
-                                <h3 style="color: white; font-weight: 200; font-size: 20px">I'm a final year undergraduate at BITS Pilani, Pilani Campus. My major is Computer Science and I have a minor in Finance. 
-                                    My research interests are in Natural Language Processing, in particular, analysis of under-resourced languages.
-                                I enjoy learning new things and have tried my hand at Augmented Reality, Game Development, Mobile Applications and Glass Painting. To know more about me, please check out my CV and feel free to reach out to me!</h3>
-                                <a href="mailto:f20171179@pilani.bits-pilani.ac.in" class="fa fa-envelope"> </a>  
-                                <a href="https://in.linkedin.com/in/asritavm" class="fa fa-linkedin"> </a> 
-                                <a href="https://github.com/avmand" class="fa fa-github"> </a> 
-                                <br>
-                                <br>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <a id="Work Experience"><h1>Work Experience</h1></a>
-
-                <div class="row" style=" margin-left: auto; margin-right: auto;">
-                    <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
-                        <div class="card">
-                            <div class="container">
-                                <br>
-                                <br>
-                                <img src="image/Udhyam.jpg" alt="Udhyam">
-                                <h3 style="color: white; font-size: 30px; font-weight: 100;">Udhyam Learning Foundation</h3>
-                                <h2 style="color: white; font-size: 30px;">Monitoring and Evaluation Intern</h2>
-                                <h4 style="color: white; font-size: 18px; font-weight:lighter; ">Performing Data Analysis and Visualization using Zoho Creator. Creating fully-functional applications with APIs to process streams of data from different platforms. Made the process of assessing the effectiveness of educational programs 3 times faster by automation.</h4>
-                                <br>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
-                        <div class="card">
-                            <div class="container">
-                                <br>
-                                <br>
-                                <img src="image/bits.png" alt="bits-pilani" style="width: 120px;">
-                                <h2 style="color: white; font-size: 30px; font-weight: 100;">BITS Pilani, Pilani Campus</h2>
-                                <h2 style="color: white; font-size: 30px;">Research Assistant</h2>
-                                <h3 style="color: white; font-size: 18px; font-weight:lighter; ">Worked with Dr. Yashvardhan Sharma as a research assistant in the Web Intelligence & Social Computing Lab on projects based on sarcasm detection, customer behavior analysis, sentiment analysis of Dravidian languages, mask and social distancing detection.</h3>
-                                <br>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <br>
-                <br>
-                <br>
-
-                <div class="row" style=" margin-left: auto; margin-right: auto;">
-                    <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
-                        <div class="card">
-                            <div class="container">
-                                <br>
-                                <br>
-                                <img src="image/sentic-logo-medium.png" alt="SenticNet" style="width: 120px;">
-                                <h2 style="color: white; font-size: 30px; font-weight: 100;">SenticNet</h2>
-                                <h2 style="color: white; font-size: 30px;">Research Intern</h2>
-                                <h3 style="color: white; font-size: 18px; font-weight:lighter; ">Built ArabiziVec, a distributed word representation for informal Arabic, an open- source project. This project was supervised by Dr. Oumaima Oueslati, Dr. Erik Cambria (Nanyang Technological University) and Dr. Yashvardhan Sharma (BITS Pilani, Pilani campus).</h3>
-                                <br>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
-                        <div class="card">
-                            <div class="container">
-                                <br>
-                                <br>
-                                <img src="image/tnstc.jpg" alt="TNSTC">
-                                <h2 style="color: white; font-size: 30px; font-weight: 100;">Tamil Nadu Science and Technology Centre</h2>
-                                <h2 style="color: white; font-size: 30px;">Technology Intern</h2>
-                                <h3 style="color: white; font-size: 18px; font-weight:lighter; ">Designed a mobile application with Augmented Reality features using ARCore and Java (Android Studio). Reduced the need for human intervention and was expected to increase visitors by at least 10-15% .</h3>
-                                <br>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <a id="Projects"><h1>Projects</h1></a>
-
-                <div class="row" style=" margin-left: auto; margin-right: auto;">
-                  <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
-                      <div class="card">
-                          <div class="container">
-                              <br>
-                              <br>
-                              <img src="image/Udhyam.jpg" alt="Udhyam">
-                              <h3 style="color: white; font-size: 30px; font-weight: 100;">Udhyam Learning Foundation</h3>
-                              <h2 style="color: white; font-size: 30px;">Monitoring and Evaluation Intern</h2>
-                              <h4 style="color: white; font-size: 18px; font-weight:lighter; ">Performing Data Analysis and Visualization using Zoho Creator. Creating fully-functional applications with APIs to process streams of data from different platforms. Made the process of assessing the effectiveness of educational programs 3 times faster by automation.</h4>
-                              <br>
-                              <br>
-                          </div>
-                      </div>
-                  </div>
-                  
-                  <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
-                      <div class="card">
-                          <div class="container">
-                              <br>
-                              <br>
-                              <img src="image/bits.png" alt="bits-pilani" style="width: 120px;">
-                              <h2 style="color: white; font-size: 30px; font-weight: 100;">BITS Pilani, Pilani Campus</h2>
-                              <h2 style="color: white; font-size: 30px;">Research Assistant</h2>
-                              <h3 style="color: white; font-size: 18px; font-weight:lighter; ">Worked with Dr. Yashvardhan Sharma as a research assistant in the Web Intelligence & Social Computing Lab on projects based on sarcasm detection, customer behavior analysis, sentiment analysis of Dravidian languages, mask and social distancing detection.</h3>
-                              <br>
-                              <br>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <br>
-              <br>
-              <br>
-
-              <div class="row" style=" margin-left: auto; margin-right: auto;">
-                  <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
-                      <div class="card">
-                          <div class="container">
-                              <br>
-                              <br>
-                              <img src="image/sentic-logo-medium.png" alt="SenticNet" style="width: 120px;">
-                              <h2 style="color: white; font-size: 30px; font-weight: 100;">SenticNet</h2>
-                              <h2 style="color: white; font-size: 30px;">Research Intern</h2>
-                              <h3 style="color: white; font-size: 18px; font-weight:lighter; ">Built ArabiziVec, a distributed word representation for informal Arabic, an open- source project. This project was supervised by Dr. Oumaima Oueslati, Dr. Erik Cambria (Nanyang Technological University) and Dr. Yashvardhan Sharma (BITS Pilani, Pilani campus).</h3>
-                              <br>
-                              <br>
-                          </div>
-                      </div>
-                  </div>
-                  
-                  <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
-                      <div class="card">
-                          <div class="container">
-                              <br>
-                              <br>
-                              <img src="image/tnstc.jpg" alt="TNSTC">
-                              <h2 style="color: white; font-size: 30px; font-weight: 100;">Tamil Nadu Science and Technology Centre</h2>
-                              <h2 style="color: white; font-size: 30px;">Technology Intern</h2>
-                              <h3 style="color: white; font-size: 18px; font-weight:lighter; ">Designed a mobile application with Augmented Reality features using ARCore and Java (Android Studio). Reduced the need for human intervention and was expected to increase visitors by at least 10-15% .</h3>
-                              <br>
-                              <br>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <a id="Awards"><h1>Awards</h1></a>
-
-                <div class="row" style=" margin-left: auto; margin-right: auto;">
-                  <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
-                      <div class="card">
-                          <div class="container">
-                              <br>
-                              <br>
-                              <img src="image/Udhyam.jpg" alt="Udhyam">
-                              <h3 style="color: white; font-size: 30px; font-weight: 100;">Udhyam Learning Foundation</h3>
-                              <h2 style="color: white; font-size: 30px;">Monitoring and Evaluation Intern</h2>
-                              <h4 style="color: white; font-size: 18px; font-weight:lighter; ">Performing Data Analysis and Visualization using Zoho Creator. Creating fully-functional applications with APIs to process streams of data from different platforms. Made the process of assessing the effectiveness of educational programs 3 times faster by automation.</h4>
-                              <br>
-                              <br>
-                          </div>
-                      </div>
-                  </div>
-                  
-                  <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
-                      <div class="card">
-                          <div class="container">
-                              <br>
-                              <br>
-                              <img src="image/bits.png" alt="bits-pilani" style="width: 120px;">
-                              <h2 style="color: white; font-size: 30px; font-weight: 100;">BITS Pilani, Pilani Campus</h2>
-                              <h2 style="color: white; font-size: 30px;">Research Assistant</h2>
-                              <h3 style="color: white; font-size: 18px; font-weight:lighter; ">Worked with Dr. Yashvardhan Sharma as a research assistant in the Web Intelligence & Social Computing Lab on projects based on sarcasm detection, customer behavior analysis, sentiment analysis of Dravidian languages, mask and social distancing detection.</h3>
-                              <br>
-                              <br>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <br>
-              <br>
-              <br>
-
-              <div class="row" style=" margin-left: auto; margin-right: auto;">
-                  <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
-                      <div class="card">
-                          <div class="container">
-                              <br>
-                              <br>
-                              <img src="image/sentic-logo-medium.png" alt="SenticNet" style="width: 120px;">
-                              <h2 style="color: white; font-size: 30px; font-weight: 100;">SenticNet</h2>
-                              <h2 style="color: white; font-size: 30px;">Research Intern</h2>
-                              <h3 style="color: white; font-size: 18px; font-weight:lighter; ">Built ArabiziVec, a distributed word representation for informal Arabic, an open- source project. This project was supervised by Dr. Oumaima Oueslati, Dr. Erik Cambria (Nanyang Technological University) and Dr. Yashvardhan Sharma (BITS Pilani, Pilani campus).</h3>
-                              <br>
-                              <br>
-                          </div>
-                      </div>
-                  </div>
-                  
-                  <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
-                      <div class="card">
-                          <div class="container">
-                              <br>
-                              <br>
-                              <img src="image/tnstc.jpg" alt="TNSTC">
-                              <h2 style="color: white; font-size: 30px; font-weight: 100;">Tamil Nadu Science and Technology Centre</h2>
-                              <h2 style="color: white; font-size: 30px;">Technology Intern</h2>
-                              <h3 style="color: white; font-size: 18px; font-weight:lighter; ">Designed a mobile application with Augmented Reality features using ARCore and Java (Android Studio). Reduced the need for human intervention and was expected to increase visitors by at least 10-15% .</h3>
-                              <br>
-                              <br>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <a id="Publications"><h1>Publications</h1></a>
-
-                <div class="row" style=" margin-left: auto; margin-right: auto;">
-                  <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
-                      <div class="card">
-                          <div class="container">
-                              <br>
-                              <br>
-                              <img src="image/Udhyam.jpg" alt="Udhyam">
-                              <h3 style="color: white; font-size: 30px; font-weight: 100;">Udhyam Learning Foundation</h3>
-                              <h2 style="color: white; font-size: 30px;">Monitoring and Evaluation Intern</h2>
-                              <h4 style="color: white; font-size: 18px; font-weight:lighter; ">Performing Data Analysis and Visualization using Zoho Creator. Creating fully-functional applications with APIs to process streams of data from different platforms. Made the process of assessing the effectiveness of educational programs 3 times faster by automation.</h4>
-                              <br>
-                              <br>
-                          </div>
-                      </div>
-                  </div>
-                  
-                  <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
-                      <div class="card">
-                          <div class="container">
-                              <br>
-                              <br>
-                              <img src="image/bits.png" alt="bits-pilani" style="width: 120px;">
-                              <h2 style="color: white; font-size: 30px; font-weight: 100;">BITS Pilani, Pilani Campus</h2>
-                              <h2 style="color: white; font-size: 30px;">Research Assistant</h2>
-                              <h3 style="color: white; font-size: 18px; font-weight:lighter; ">Worked with Dr. Yashvardhan Sharma as a research assistant in the Web Intelligence & Social Computing Lab on projects based on sarcasm detection, customer behavior analysis, sentiment analysis of Dravidian languages, mask and social distancing detection.</h3>
-                              <br>
-                              <br>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <br>
-              <br>
-              <br>
-
-              <div class="row" style=" margin-left: auto; margin-right: auto;">
-                  <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
-                      <div class="card">
-                          <div class="container">
-                              <br>
-                              <br>
-                              <img src="image/sentic-logo-medium.png" alt="SenticNet" style="width: 120px;">
-                              <h2 style="color: white; font-size: 30px; font-weight: 100;">SenticNet</h2>
-                              <h2 style="color: white; font-size: 30px;">Research Intern</h2>
-                              <h3 style="color: white; font-size: 18px; font-weight:lighter; ">Built ArabiziVec, a distributed word representation for informal Arabic, an open- source project. This project was supervised by Dr. Oumaima Oueslati, Dr. Erik Cambria (Nanyang Technological University) and Dr. Yashvardhan Sharma (BITS Pilani, Pilani campus).</h3>
-                              <br>
-                              <br>
-                          </div>
-                      </div>
-                  </div>
-                  
-                  <div class="columnWorkExp" style=" margin-left: auto; margin-right: auto;">
-                      <div class="card">
-                          <div class="container">
-                              <br>
-                              <br>
-                              <img src="image/tnstc.jpg" alt="TNSTC">
-                              <h2 style="color: white; font-size: 30px; font-weight: 100;">Tamil Nadu Science and Technology Centre</h2>
-                              <h2 style="color: white; font-size: 30px;">Technology Intern</h2>
-                              <h3 style="color: white; font-size: 18px; font-weight:lighter; ">Designed a mobile application with Augmented Reality features using ARCore and Java (Android Studio). Reduced the need for human intervention and was expected to increase visitors by at least 10-15% .</h3>
-                              <br>
-                              <br>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-        </div>
+      body {
+        margin: 0;
+        justify-content: center;
+        align-items: top;
+        background: rgb(46, 42, 42);
+        color: white;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
       
+      .module-jamf {
+        width: 100%;
+        height: 100%;
+      }
+
+      .jamf-container {
+        display: block;
+        text-align: center;
+      }
+
+      .jamf-mover {
+        width: 100%;
+        height: 100%;
+        background: url("./image/sky.jpg");
+        background-size: 700px; 
+        background-position: 50px 50px;
+        background-repeat: repeat;
+        transform: scale(1);
+        color: white;
+        text-align: center;
+        transition: background-position 0.25s;
+        &.no-more-slidey {
+        transition: none;
+        }
+      }
+
+      * {
+      box-sizing: border-box;
+      }
+
+      .navbarNotSticky {
+        overflow: hidden;
+        background-color: rgb(1, 1, 34);
+        top: 0;
+      }
+
+      .navbarNotSticky a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+
+      .navbarNotSticky a.right {
+        float: right;
+      }
+
+      .navbarNotSticky a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .navbar {
+        overflow: hidden;
+        background-color: rgb(1, 1, 34);
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+
+      .navbar a.right {
+        float: right;
+      }
+
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .row {  
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+      }
+
+      .rowWork {  
+        display: flex;
+      }
+
+      .rowColor {  
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+        background-color: #e4e4fd;
+      }
+
+      @media screen and (max-width: 700px) {
+        .row {   
+          flex-direction: column;
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        .rowWork {   
+          flex-direction: column;
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        .rowColor {   
+          flex-direction: column;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        .navbar a {
+          float: none;
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        .navbarNotSticky a {
+          float: none;
+          width: 100%;
+        }
+      }
+
+      .column {
+        float: left;
+        width: 33.33%;
+        margin:auto;
+        margin-bottom: auto;
+        padding: 0 8px;
+      }
+
+      .columnMain {
+        float: left;
+        width: 100%;
+        margin:auto;
+        margin-bottom: auto;
+        padding: 0 8px;
+      }
+
+      .columnWorkExp {
+        float: left;
+        width: 80%;
+        margin:auto;
+        margin-bottom: auto;
+        padding: 0 8px;
+      }
+
+      .columnAbout {
+        float: right;
+        width: 70%;
+        margin:auto;
+        margin-bottom: auto;
+        display: flex;
+        background-color: white;
+      }
+
+      .columnWorkExpImg {
+        float: right;
+        width: 80%;
+        margin:auto;
+        margin-bottom: auto;
+        display: flex;
+        background-color: white;
+      }
+
+      .columnAchievements {
+        float: center;
+        width: 80%;
+        margin:auto;
+        margin-bottom: auto;
+        display: flex;
+        background-color: white;
+      }
+
+      .card {
+        margin:auto;
+        background-color: white; 
+        width: 70%;
+      }
+
+      .cardImg {
+        margin:auto;
+        background-color: white; 
+        width: 40%;
+      }
+
+      .cardAchievementImg {
+        margin:auto;
+        background-color: white; 
+        width: 20%;
+      }
+
+      .cardAchievement {
+        margin:auto;
+        background-color: white; 
+        width: 70%;
+      }
+
+      .cardblue {
+        background-color: rgb(2,2,8);
+        margin:auto
+      }
+
+      .about-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #e4d2d2;
+        color: white;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .title {
+        color: grey;
+      }
+
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      h1 {  
+        font-size: 50px;
+        left: 0; 
+        width: 100%; 
+      }
+
+      .fa {
+        padding: 13px;
+        font-size: 25px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 5px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        border-radius: 50%;
+        background-clip: content-box;
+      }
+
+
+      .fa:hover {
+        opacity: 0.7;
+      }
+
+      .fa-google {
+        background: #dd4b39;
+        color: white;
+      }
+
+      .fa-envelope {
+        background: #dd4b39;
+        color: white;
+      }
+
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+
+      .fa-github {
+        color: white;
+        background: black;
+      }
+
+      .fa-medium {
+        color: white;
+        background: black;
+      }
+
+      .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: rgb(1, 1, 34);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+      }
+
+      .containerTimeline {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+      }
+
+      .containerTimeline::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -12px;
+        background-color: white;
+        border: 4px solid #FF9F55;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      .leftTimeline {
+        left: 0;
+      }
+
+      .rightTimeline {
+        left: 50%;
+      }
+
+      .leftTimeline::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent rgb(1, 1, 34);
+      }
+
+      .rightTimeline::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent rgb(1, 1, 34) transparent transparent;
+      }
+
+      .rightTimeline::after {
+        left: -12px;
+      }
+
+      .contentTimeline {
+        padding: 20px 30px;
+        background-color: rgb(1, 1, 34);
+        position: relative;
+        border-radius: 6px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .timeline::after {
+          left: 31px;
+        }
+
+        .containerTimeline {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
+        }
+
+        .containerTimeline::before {
+          left: 60px;
+          border: medium solid white;
+          border-width: 10px 10px 10px 0;
+          border-color: transparent white transparent transparent;
+        }
+
+        .leftTimeline::after, .rightTimeline::after {
+          left: 12px;
+        }
+
+        .rightTimeline {
+          left: 0%;
+        }
+      }
+
+      .arrow {
+        text-align: center;
+        margin: 8% ;
+      }
+
+      .bounce {
+        -moz-animation: bounce 2s infinite;
+        -webkit-animation: bounce 2s infinite;
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-30px);
+        }
+        60% {
+          transform: translateY(-15px);
+        }
+      }
+
+      .cardProjects {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 500px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        background-color: white;
+        color: #000;
+      }
+
+      .titleProjects {
+        color: grey;
+        font-size: 18px;
+      }
+
+      buttonProjects {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+      }
+
+      aProjects {
+        text-decoration: none;
+        font-size: 22px;
+        color: black;
+      }
+
+      buttonProjects:hover, aProjects:hover {
+        opacity: 0.7;
+      }
+
+      .buttonPublication {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #050516;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 14px;
+        padding: 10px;
+        /* width: 100px; */
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+
+      .buttonPublication span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      .buttonPublication span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+
+      .buttonPublication:hover span {
+        padding-right: 25px;
+      }
+
+      .buttonPublication:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+
+
+      .imgProfile {
+        border-radius: 50%;
+      }
+
+      .containerTyping {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .containerTyping p {
+        font-size: 3rem;
+        padding: 0.5rem;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .containerTyping p span.typed-text {
+        font-weight: normal;
+        color: #dd7732;
+      }
+
+      .containerTyping p span.cursor {
+        display: inline-block;
+        background-color: #ccc;
+        margin-left: 0.1rem;
+        width: 3px;
+        animation: blink 1s infinite;
+      }
+      .containerTyping p span.cursor.typing {
+        animation: none;
+      }
+      @keyframes blink {
+        0%  { background-color: #ccc; }
+        49% { background-color: #ccc; }
+        50% { background-color: transparent; }
+        99% { background-color: transparent; }
+        100%  { background-color: #ccc; }
+      }
+      
+    </style>
+  </head>
+    
+  <body>
+    <div>
+
+      <div class="module-jamf" id="module-jamf">
+        <div class="jamf-container" id="jamf-container" >
+          <div class="jamf-mover" id="jamf-mover">
+            <div class="navbarNotSticky">
+              <a href="#Achievements" class="right">Achievements</a>
+              <a href="#Projects" class="right">Projects</a>
+              <a href="#Work Experience" class="right">Work Ex</a>
+              <a href="#About" class="right">About</a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 >Asrita Venkata Mandalam</h1>
+            <br>
+            <div class="containerTyping">
+              <p><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+            </div>
+            <br>
+            <br>
+            <div class="arrow bounce" >
+              <a class="fa fa-arrow-down fa-2x" href="#About" style="color: white; text-decoration: none;"></a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <a id="About" ></a>
+      <div class="navbar">
+        <a href="#Achievements" class="right">Achievements</a>
+        <a href="#Projects" class="right">Projects</a>
+        <a href="#Work Experience" class="right">Work Ex</a>
+        <a href="#About" class="right">About</a>
+      </div>
+      <div class="row" style=" margin-left: auto; margin-right: auto; background-color: white;">
+        <div class="columnAbout" style=" margin-left: auto; margin-right: auto;">
+          <div class="cardImg">
+            <div class="container">
+              <br>
+              <br>
+              <br>
+              <img class="imgProfile" src="image/about.jpg" alt="Avatar" style="width:350px; height: 350px;">
+            </div>
+            <br>
+            <br>
+            <br>
+          </div>
+          <div class="card">
+            <div class="container" >
+              <br>
+              <br>
+              <h2 style="color: rgb(2,2,8); font-size: 30px; font-family: Verdana;">Hello!</h2>
+              <h3 style="color: rgb(2,2,8); font-weight: 200; font-size: 20px; font-family: Helvetica;">I'm a final year undergraduate at BITS Pilani, Pilani Campus. I'll be joining Arizona State University this Fall, 2021. My major is Computer Science and I have a minor in Finance. 
+              I enjoy analyzing and working with data. Apart from working in the field of data science (particularly Natural Language Processing), I have a keen interest in actuarial science and have passed Exam P. To know more about me, please check out my <a href="https://drive.google.com/file/d/1rw0O0Fj5WshydOvsaNxK2G_uhQgFHjT2/view?usp=sharing/">resume</a> and feel free to reach out to me!</h3>
+              <a href="mailto:asritam29@gmail.com" class="fa fa-envelope" > </a>  
+              <a href="https://in.linkedin.com/in/asritavm" class="fa fa-linkedin" target="_blank"> </a> 
+              <a href="https://github.com/avmand" class="fa fa-github" target="_blank"> </a> 
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a id="Work Experience" ></a>
+      <div class="rowColor" >
+        <div class="columnMain" style=" margin-left: auto; margin-right: auto;">
+          <div class="container" >
+            <br>
+            <br>
+            <p style="color: #050516; font-size: 60px; font-family:verdana;">Work Experience</p>
+            <div class="rowAchievements" style=" margin-left: auto; margin-right: auto;">
+              <div class="columnAchievements" style="background-color: transparent;">
+                <div class="cardAchievementImg" style="background-color: white;">
+                  <img src="image/Udhyam.jpg" alt="Udhyam" style="width: 100%; margin-left: auto; margin-right: auto;">
+                </div>
+                <div class="cardAchievement" style="text-align: left;  background-color: transparent;">
+                  <div class="container" style =" padding-right: 30px; padding-top: 20px; padding-bottom: 20px;">
+                    <h3 style="color: black; font-size: 20px; font-weight: 100;">Udhyam Learning Foundation</h3>
+                    <h2 style="color: black; font-size: 20px;">Monitoring and Evaluation Intern | <p style="color: rgb(54, 53, 53); font-size: 15px; display: inline-block;" > 11/2020 - 05/2021</p></h2>
+                    <p style="color: black; font-size: 18px; font-weight:lighter; text-align: justify;">Performing Data Analysis and Visualization using Zoho Creator. Creating fully-functional applications with APIs to process streams of data from different platforms. Made the process of assessing the effectiveness of educational programs 3 times faster by automation.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr style=" display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #c5c5f3;
+            margin: 1em 0;
+            padding: 0;
+            margin-left:7.5%;
+            margin-right:7.5%;">
+            <div class="rowAchievements" style=" margin-left: auto; margin-right: auto;">
+              <div class="columnAchievements" style="background-color: transparent;">
+                <div class="cardAchievementImg" style="background-color: transparent;">
+                  <img src="image/bits.png" alt="bits-pilani" style="width: 60%; margin-left: auto; margin-right: auto;">
+                </div>
+                <div class="cardAchievement" style="text-align: left;  background-color: transparent;">
+                  <div class="container" style =" padding-right: 30px; padding-top: 20px; padding-bottom: 20px;">
+                    <h3 style="color: black; font-size: 20px; font-weight: 100;">BITS Pilani, Pilani Campus</h3>
+                    <h2 style="color: black; font-size: 20px; ">Research Assistant | <p style="color: rgb(54, 53, 53); font-size: 15px; display: inline-block;" > 01/2019 - 05/2021</p></h2>
+                    <p style="color: black; font-size: 18px; font-weight:lighter; text-align: justify;">Worked with Dr. Yashvardhan Sharma as a research assistant in the Web Intelligence & Social Computing Lab on projects based on sarcasm detection, customer behavior analysis, sentiment analysis of Dravidian languages, mask and social distancing detection.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr style=" display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #c5c5f3;
+            margin: 1em 0;
+            padding: 0;
+            margin-left:7.5%;
+            margin-right:7.5%;">
+            <div class="rowAchievements" style=" margin-left: auto; margin-right: auto;">
+              <div class="columnAchievements" style="background-color: transparent;">
+                <div class="cardAchievementImg" style="background-color: transparent;">
+                  <img src="image/senticnet2.png" alt="SenticNet" style="width: 60%; margin-left: auto; margin-right: auto;">
+                </div>
+                <div class="cardAchievement" style="text-align: left;  background-color: transparent;">
+                  <div class="container" style =" padding-right: 30px; padding-top: 20px; padding-bottom: 20px;">
+                    <h3 style="color: black; font-size: 20px; font-weight: 100;">SenticNet</h3>
+                    <h2 style="color: black; font-size: 20px;">Research Intern | <p style="color: rgb(54, 53, 53); font-size: 15px; display: inline-block;" > 07/2020 - 12/2020</p></h2>
+                    <p style="color: black; font-size: 18px; font-weight:lighter; text-align: justify;">Built ArabiziVec, a distributed word representation for informal Arabic, an open- source project. This project was supervised by Dr. Oumaima Oueslati, Dr. Erik Cambria (Nanyang Technological University) and Dr. Yashvardhan Sharma (BITS Pilani, Pilani campus).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr style=" display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #c5c5f3;
+            margin: 1em 0;
+            padding: 0;
+            margin-left:7.5%;
+            margin-right:7.5%;">
+            <div class="rowAchievements" style=" margin-left: auto; margin-right: auto;">
+              <div class="columnAchievements" style="background-color: transparent;">
+                <div class="cardAchievementImg" style="background-color: transparent;">
+                  <img src="image/tnstc.jpg" alt="TNSTC" style="width: 60%; margin-left: auto; margin-right: auto;">
+                </div>
+                <div class="cardAchievement" style="text-align: left;  background-color: transparent;">
+                  <div class="container" style =" padding-right: 30px; padding-top: 20px; padding-bottom: 20px;">
+                    <h3 style="color: black; font-size: 20px; font-weight: 100;">Tamil Nadu Science and Technology Centre</h3>
+                    <h2 style="color: black; font-size: 20px;">Technology Intern | <p style="color: rgb(54, 53, 53); font-size: 15px; display: inline-block;" > 05/2019 - 07/2019</p></h2>
+                    <p style="color: black; font-size: 18px; font-weight:lighter; text-align: justify;">Designed a mobile application with Augmented Reality features using ARCore and Java (Android Studio). Reduced the need for human intervention and was expected to increase visitors by at least 10-15%.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <a id="Education" ></a>
+      <div class="row" style="background-color: white;">
+        <div class="columnMain" style=" margin-left: auto; margin-right: auto; background-color: white;">
+          <div class="container" >
+            <br>
+            <br>
+            <p style="color: #050516; font-size: 60px; font-family:verdana;">Education</p>
+            <div class="timeline">
+              <div class="containerTimeline leftTimeline">
+                <div class="contentTimeline">
+                  <h3>2021-23</h3>
+                  <h2>Arizona State University</h2>
+                  <p>MS Computer Science</p>
+                </div>
+              </div>
+              <div class="containerTimeline rightTimeline">
+                <div class="contentTimeline">
+                  <h3>2017-21</h3>
+                  <h2>BITS Pilani, Pilani Campus</h2>
+                  <p>BE Computer Science</p>
+                  <p>Minor in Finance</p>
+                </div>
+              </div>
+              <div class="containerTimeline leftTimeline">
+                <div class="contentTimeline">
+                  <h3>2015-17</h3>
+                  <h2>National Public School HSR</h2>
+                  <p>High School</p>
+                </div>
+              </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <a id="Projects" ></a>
+      <div class="rowColor" >
+        <div class="columnMain" style=" margin-left: auto; margin-right: auto;">
+          <div class="container" >
+            <br>
+            <br>
+            <p style="color: #050516; font-size: 60px; font-family:verdana;">Projects</p>
+            <br>
+            <br>
+            <div class="rowWork" style=" margin-left: auto; margin-right: auto;">
+              <div class="column" >
+                <div class="cardProjects" style="padding: 25px;">
+                  <img src="image/netapp_mainPage_16_9.png" alt="Just-Justice" style="width: 450px;">
+                  <h2>Just-Justice</h2>
+                  <p class="title">NetApp Women Innovathon</p>
+                  <p>A search engine for legal documents. It aimed to cater to any user, regardless of whether they were familiar with legal jargon or not. I worked on the data visualizations and backend.</p>
+                  <a href="https://milonimittal.medium.com/a-search-engine-for-legal-documents-ce689567fc34" target="_blank"><i class="fa fa-medium" ></i></a>
+                  <a href="https://github.com/avmand/Legal-Search-Engine" target="_blank"><i class="fa fa-github" ></i></a>
+                  <br>
+                  <br>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+              </div> 
+              <div class="column" >
+                <div class="cardProjects" style="padding: 25px;">
+                  <img src="image/grid_logo_16_9.png" alt="Fashion_Intelligence_System" style="width: 450px;">
+                  <h2>Fashion Intelligence System</h2>
+                  <p class="title">Flipkart Grid Software Development Challenge 2.0</p>
+                  <p>Future fashion trends predictor and current trends analyzer. Modeled a Fashion Intelligence system using Natural Language Processing, Convolutional Neural Networks, and Generative Adversarial Networks.</p>
+                  <a href="https://github.com/avmand/GriD_Fashion" target="_blank"><i class="fa fa-github"></i></a>
+                  <br>
+                  <br>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+              </div>
+            </div>
+            <div class="rowWork" style=" margin-left: auto; margin-right: auto;">
+              <div class="column" >
+                <div class="cardProjects" style="padding: 25px;">
+                  <img src="image/compiler_16_9.jpg" alt="ERPLAG" style="width: 450px;">
+                  <h2>A Toy Compiler for ERPLAG</h2>
+                  <p class="title">Course CS F363 Compiler Construction</p>
+                  <p>Designed a Compiler for the C-like language, ERPLAG, as part of the course Compiler Construction at BITS Pilani. It compiles ERPLAG source code to NASM code.</p>
+                  <a href="https://github.com/avmand/toy-compiler" target="_blank"><i class="fa fa-github" ></i></a>
+                  <br>
+                  <br>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+              </div>
+              <div class="column" >
+                <div class="cardProjects" style="padding: 25px;">
+                  <img src="image/ir_16_9.jpg" alt="IR" style="width: 450px;">
+                  <h2>Document Retriever using LSI</h2>
+                  <p class="title">Course CS F469 Information Retrieval</p>
+                  <p>Created a vector space-based information retrieval system that used Latent Semantic Indexing. </p>
+                  <a href="https://github.com/avmand/Document_Retrieval" target="_blank"><i class="fa fa-github" ></i></a>
+                  <br>
+                  <br>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+              </div>
+              </div>
+          </div>
+        </div>
+      </div>  
+
+      <a id="Achievements" ></a>
+      <div class="row" style="background-color: white;">
+        <div class="columnMain" style=" margin-left: auto; margin-right: auto; background-color: white;">
+          <div class="container" >
+            <br>
+            <br>
+            <p style="color: #050516; font-size: 60px; font-family:verdana;">Achievements</p>
+            <hr style=" display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 1em 0;
+            padding: 0;
+            margin-left:17.5%;
+            margin-right:17.5%;">
+            <p style="color: #050516; font-size: 40px; font-family:verdana;">Exams</p>
+            <div class="rowAchievements" style=" margin-left: auto; margin-right: auto;">
+              <div class="columnAchievements" >
+                <div class="cardAchievementImg">
+                  <img src="image/soa.png" alt="SOA" style="width: 100%; margin-left: auto; margin-right: auto;">
+                </div>
+                <div class="cardAchievement" style="text-align: left;">
+                  <div class="container" style =" padding-right: 30px; padding-top: 20px; padding-bottom: 20px;">
+                    <h3 style="color: black; font-size: 20px; font-weight: 100;">Society of Actuaries (SOA)</h3>
+                    <h2 style="color: black; font-size: 20px;">Passed Exam P: Probability</h2>
+                    <p style="color: black; font-size: 18px; font-weight:lighter; text-align: justify;">Exam P covered probability tools to quantitatively assess risk. Only 41% of exam-takers passed. Achieved a distinctive score of 9/10. Tested topics included univariate and multivariate random variables, general probability and concepts of risk and insurance.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr style=" display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 1em 0;
+            padding: 0;
+            margin-left:7.5%;
+            margin-right:7.5%;">
+            <p style="color: #050516; font-size: 40px; font-family:verdana;">Awards</p>
+            <div class="rowAchievements" style=" margin-left: auto; margin-right: auto;">
+              <div class="columnAchievements" >
+                <div class="cardAchievementImg">
+                  <img src="image/netapp.png" alt="NetApp Logo" style="width: 100%; margin-left: auto; margin-right: auto;">
+                </div>
+                <div class="cardAchievement" style="text-align: left;">
+                  <div class="container" style =" padding-right: 30px; padding-top: 20px; padding-bottom: 20px;">
+                    <h3 style="color: black; font-size: 20px; font-weight: 100;">NetApp Women Innovathon</h3>
+                    <h2 style="color: black; font-size: 20px;">Second Runners-Up</h2>
+                    <p style="color: black; font-size: 18px; font-weight:lighter; text-align: justify;">Created a Legal Case and Documents retrieval system . Outperformed 500+ teams to earn the second runners-up position (3rd Place). Integrated Flask (for APIs), HTML , Python and JavaScript to ensure a seamless user experience with attractive data visualizations.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr style=" display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 1em 0;
+            padding: 0;
+            margin-left:7.5%;
+            margin-right:7.5%;">
+            <p style="color: #050516; font-size: 40px; font-family:verdana;">Publications</p>
+            <div class="rowAchievements" style=" margin-left: auto; margin-right: auto;">
+              <div class="columnAchievements" >
+                <div class="cardAchievement" style="text-align: left; width: 80%;">
+                  <div class="container" >
+                    <h3 style="color: black; font-size: 20px;display: inline-block; padding-right: 30px; ">Sentiment Analysis of Dravidian Code Mixed Data</h3> <a href="https://www.aclweb.org/anthology/2021.dravidianlangtech-1.6/" style="display: inline;" target="_blank"><button class="buttonPublication" style="vertical-align:middle"><span>Paper </span></button></a>
+                    <a href="https://2021.eacl.org/" style="text-decoration: none;" target="_blank"><h4 style="color: rgb(3, 3, 94);  text-align: justify;">European Chapter of the Association for Computational Linguistics (EACL) 2021</h4></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr style=" display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 1em 0;
+            padding: 0;
+            margin-left:17.5%;
+            margin-right:17.5%;">
+            <div class="rowAchievements" style=" margin-left: auto; margin-right: auto;">
+              <div class="columnAchievements" >
+                <div class="cardAchievement" style="text-align: left; width: 80%;">
+                  <div class="container" >
+                    <h3 style="color: black; font-size: 20px;display: inline-block; padding-right: 30px; ">Irony Detection in Non-English Tweets</h3> <a href="https://ieeexplore.ieee.org/document/9418186/" style="display: inline;" target="_blank"><button class="buttonPublication" style="vertical-align:middle"><span>Paper </span></button></a>
+                    <a href="https://ieeexplore.ieee.org/servlet/opac?punumber=9417810" style="text-decoration: none;" target="_blank"><h4 style="color: rgb(3, 3, 94);  text-align: justify;">IEEE sponsored International Conference for Convergence in Technology (I2CT) 2021</h4></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr style=" display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 1em 0;
+            padding: 0;
+            margin-left:17.5%;
+            margin-right:17.5%;">
+            <div class="rowAchievements" style=" margin-left: auto; margin-right: auto;">
+              <div class="columnAchievements" >
+                <div class="cardAchievement" style="text-align: left; width: 80%;">
+                  <div class="container" >
+                    <h3 style="color: black; font-size: 20px;display: inline-block; padding-right: 30px; "> Sub-Word Level Sentiment Analysis of Dravidian Code Mixed Data</h3> <a href="http://ceur-ws.org/Vol-2826/T4-4.pdf" style="display: inline;" target="_blank"><button class="buttonPublication" style="vertical-align:middle"><span>Paper </span></button></a>
+                    <a href="http://fire.irsi.res.in/fire/2020/home/" style="text-decoration: none;" target="_blank"><h4 style="color: rgb(3, 3, 94);  text-align: justify;">Forum for Information Retrieval Evaluation 2020</h4></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr style=" display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 1em 0;
+            padding: 0;
+            margin-left:17.5%;
+            margin-right:17.5%;">
+            <div class="rowAchievements" style=" margin-left: auto; margin-right: auto;">
+              <div class="columnAchievements" >
+                <div class="cardAchievement" style="text-align: left; width: 80%;">
+                  <div class="container" >
+                    <h3 style="color: black; font-size: 20px;display: inline-block; padding-right: 30px; ">Embedding-based Authorship Identification of Source Code</h3> <a href="http://ceur-ws.org/Vol-2826/T5-8.pdf" style="display: inline;" target="_blank"><button class="buttonPublication" style="vertical-align:middle"><span>Paper </span></button></a>
+                    <a href="http://fire.irsi.res.in/fire/2020/home/" style="text-decoration: none;" target="_blank"><h4 style="color: rgb(3, 3, 94);  text-align: justify;">Forum for Information Retrieval Evaluation 2020</h4></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>  
+
+      <a id="Contact" ></a>
+      <div class="rowColor" style="background-color: #d2d1e0">
+        <div class="columnMain" style=" margin-left: auto; margin-right: auto;">
+          <div class="container" >
+            <br>
+            <br>
+            <a href="mailto:asritam29@gmail.com" class="fa fa-envelope" > </a>  
+            <a href="https://in.linkedin.com/in/asritavm" class="fa fa-linkedin" target="_blank"> </a>
+            <a href="https://github.com/avmand" class="fa fa-github" target="_blank"> </a>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
     </div>
+
     <script type="text/javascript">
 
+      const typedTextSpan = document.querySelector(".typed-text");
+      const cursorSpan = document.querySelector(".cursor");
+      const textArray = ["Student.", "Analyst.", "NLP enthusiast."];
+      const typingDelay = 200;
+      const erasingDelay = 100;
+      const newTextDelay = 1000; 
+      let textArrayIndex = 0;
+      let charIndex = 0;
+      function type() {
+        if (charIndex < textArray[textArrayIndex].length) {
+          if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+          typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(type, typingDelay);
+        } 
+        else {
+          cursorSpan.classList.remove("typing");
+          setTimeout(erase, newTextDelay);
+        }
+      }
+      function erase() {
+        if (charIndex > 0) {
+          if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+          typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+          charIndex--;
+          setTimeout(erase, erasingDelay);
+        } 
+        else {
+          cursorSpan.classList.remove("typing");
+          textArrayIndex++;
+          if(textArrayIndex>=textArray.length) textArrayIndex=0;
+          setTimeout(type, typingDelay + 1100);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function() { 
+        if(textArray.length) setTimeout(type, newTextDelay + 250);
+      });
       var container = document.querySelector("#jamf-container");
       var mover = document.querySelector("#jamf-mover");
-
       container.addEventListener("mousemove", function(e) {
         mover.style.backgroundPositionX = -e.offsetX * 1.8 + "px";
         mover.style.backgroundPositionY = -e.offsetY + 80 + "px";
       });
-
       container.addEventListener("mouseenter", function() {
-        
         setTimeout(function() {
           mover.classList.add("no-more-slidey");
           container.removeEventListener("mouseenter");
         }, 250);
-        
       });
-        
-            </script>
-</body>
+    </script>
+  </body>
 </html>
