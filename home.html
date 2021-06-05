@@ -98,10 +98,6 @@
         color: black;
       }
 
-      .navbar .icon 
-      {
-        display: none;
-      }
 
       .row {  
         display: -ms-flexbox; /* IE10 */
@@ -710,9 +706,6 @@
         <a href="#Education" class="right">Education</a>
         <a href="#Work Experience" class="right">Work Ex</a>
         <a href="#About" class="right">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
       </div>
       <div class="row" style=" margin-left: auto; margin-right: auto; background-color: white;">
         <div class="columnAbout" style=" margin-left: auto; margin-right: auto;">
@@ -1171,18 +1164,6 @@
         }, 250);
       });
 
-      function myFunction() 
-      {
-        var x = document.getElementById("navigationBar");
-        if (x.className === "navbar") 
-        {
-          x.className += " responsive";
-        } 
-        else 
-        {
-          x.className = "navigationBar";
-        }
-      }
     </script>
   </body>
 </html>
